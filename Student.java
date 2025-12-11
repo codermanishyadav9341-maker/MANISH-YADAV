@@ -1,106 +1,104 @@
-
+package ENCAPSULATIONS;
 
 class Student {
     private String name;
-    private int rollNo;
-    private double mathGrade;
-    private double scienceGrade;
-    private double englishGrade;
+    private int roll_number;
+    private double math_grade;
+    private double science_grade;
+    private double english_grade;
 
-
-    Student(String name,int rollNo){
+    public Student(String name,int roll_number){
         this.name = name;
-        this.rollNo = rollNo;
+        this.roll_number = roll_number;
 
     }
-
-//       Using Setter Methods;
-
-    public void setMathGrade(double newMathGrade){
-        if(mathGrade >= 0  && mathGrade < 100){
-            mathGrade = newMathGrade;
+    public void setMath_grade(double math_grade){
+        if((math_grade > 0 ) && (math_grade < 100)){
+            this.math_grade = math_grade;
         }
          else{
-             System.out.println("Invalid");
+             System.out.println("Invalid math_grade");
         }
     }
+    public void setScience_grade(double science_grade){
+       if((science_grade > 0) &&  (science_grade < 100)){
+           this.science_grade = science_grade;
+       }
+        else{
+            System.out.print("Invalid Science_grade");
+       }
+    }
 
-    public void setScienceGrade(double newScienceGrade){
-        if(scienceGrade >= 0 && scienceGrade < 100){
-            scienceGrade = newScienceGrade;
+    public void setEnglish_grade(double english_grade){
+        if((english_grade > 0) && (english_grade < 100)){
+            this.english_grade = english_grade;
         }
          else{
-             System.out.println("Invalid Marks");
+             System.out.println("Invalid Science grade");
         }
     }
 
-    public void setEnglishGrade(double newEnglishGrade){
-        if(englishGrade >= 0  && englishGrade < 100){
-            englishGrade = newEnglishGrade;
-        }
-         else{
-             System.out.println("Invalid Marks ");
-        }
-    }
-
-//     Using getter methods ;
-
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public int getRollNo(){
-        return rollNo;
+    public int getRoll_number() {
+        return roll_number;
     }
 
-    public double getMathGrade(){
-        return mathGrade;
+    public double getMath_grade() {
+        return math_grade;
     }
 
-    public double getScienceGrade(){
-        return scienceGrade;
+    public double getScience_grade() {
+        return science_grade;
     }
 
-    public double getEnglishGrade(){
-        return englishGrade;
+    public double getEnglish_grade() {
+        return english_grade;
     }
 
-//     Get Average marks;
-
-    public double getAverage(){
-        return (mathGrade + scienceGrade + englishGrade)/3.0;
+    public double getAverageGrade(){
+        double average_grade = (math_grade + science_grade + english_grade)/3;
+        return average_grade;
     }
 
-    public String getGrade(){
+    public String getLetterGrade() {
 
-        double avg = getAverage();
-        if(avg >= 90)  return "Grade A";
-               else if(avg >= 80) return "Garde:-  B";
-               else if(avg >= 70) return "Grade:-  C";
-               else if(avg >= 60) return "Grade:-  D";
-               else return "F";
+        double avg = getAverageGrade();
+
+        if (avg >= 90) return "A";
+        else if (avg >= 80) return "B";
+        else if (avg >= 70) return "C";
+        else if(avg >= 60) return "D";
+        else return "F";
+
     }
-
 
     public static void main(String[] args){
 
-        Student so = new Student("Manish",101);
-        so.setMathGrade(80);
-        so.setScienceGrade(60);
-        so.setEnglishGrade(90);
-        so.getName();
-        so.getRollNo();
+        Student s = new Student("Manish",101);
+
+      s.getName();
+      s.getRoll_number();
+       s.setMath_grade(80);
+       s.setScience_grade(70);
+       s.setEnglish_grade(90);
+      s.getAverageGrade();
+      s.getLetterGrade();
 
 
-        System.out.println("---------Report Card---------------");
-        System.out.println("Student Name:- " +so.getName());
-        System.out.println("Roll number:- " +so.getRollNo());
-        System.out.println("MathMarks:- " +so.getMathGrade());
-        System.out.println("ScienceMarks:- " +so.getScienceGrade());
-        System.out.println("EnglishMarks:- " +so.getEnglishGrade());
-        System.out.println("Average Marks:- " +so.getAverage());
-        System.out.println(so.getGrade());
+      System.out.println("---------Report Card-------------");
+      System.out.println("Student Name:- " +s.getName());
+      System.out.println("Roll No.:- " +s.getRoll_number());
+      System.out.println("Maths Marks:- " +s.getMath_grade());
+      System.out.println("Science Marks:- " +s.getScience_grade());
+      System.out.println("English Marks:- " +s.getEnglish_grade());
+      System.out.println("Average Marks:- " + s.getAverageGrade());
+      System.out.println("Grade:- " + s.getLetterGrade());
+
 
 
     }
+
 }
