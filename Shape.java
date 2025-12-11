@@ -1,21 +1,39 @@
-package Inheritance1;
+package POLYMORPHISM;
 
  class Shape {
-     void area(){
-         System.out.println("Calculating areas:----");
+     void draw(){
+         System.out.println("Drawing Shape");
      }
-
 }
-
-class Rectangle extends Shape{
-     void area(int length,int breath){
-         int area_of_rectangle = (length * breath);
-         System.out.println("Area of Rectangle:-  "  +area_of_rectangle);
+ class circle extends Shape{
+     void draw(){
+         System.out.println("Drawing Circle");
      }
-     public static void main(String[] args){
+
+     void draw(int radius){
+         System.out.println("Drawing Circle of radius is " +radius);
+     }
+ }
+ class Rectangle extends Shape{
+     void draw(){
+         System.out.println("Drawing Rectangle");
+     }
+
+     public static void main(String[] args) {
+
+         Shape s = new Shape();
+         s.draw();
 
          Rectangle r = new Rectangle();
-         r.area();
-         r.area(10,5);
+         r.draw();
+
+         circle c = new circle();
+         c.draw();
+         c.draw(10);
+
+
+
      }
-}
+ }
+
+

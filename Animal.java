@@ -1,20 +1,31 @@
-package Inheritance1;
+package POLYMORPHISM;
 
-public class Animal {
+ class Animal {
      void makeSound(){
-         System.out.println("Animal Sounds");
+         System.out.println("Animal makes Sounds");
      }
 }
+ class Dog extends Animal{
+     void makesSound(){
 
-class Dog extends Animal{
-     void makeSound(){
-         System.out.println("Dog barks");
+         System.out.println("Dogs barks");
+     }
+ }
+
+ class cat extends Animal{
+     void makesSound(){
+
+         System.out.println("Cat meows");
      }
 
-    public static void main(String[] args) {
-        Dog d = new Dog();
-        d.makeSound();
+     public static void main(String[] args) {
 
+         cat c = new cat();
+         c.makeSound();
+         c.makesSound();
 
-    }
-}
+         Dog d = new Dog();
+         d.makeSound();
+         d.makesSound();
+     }
+ }

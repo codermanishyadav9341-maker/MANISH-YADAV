@@ -1,21 +1,42 @@
-package Inheritance1;
+package POLYMORPHISM;
 
- class Employee {
-     void displayInfo(String name){
-         System.out.println("Employee Name:- " +name);
-     }
+class Employee {
+    int getBonus(int num) {
+        return num;
+    }
 }
 
 class Manager extends Employee{
-     void displayInfo(String department){
-         System.out.println("Departments:- " +department);
-     }
+    int getBonus(int num1){
+        return num1;
+    }
+}
 
-     public static void main(String[] args){
+class Developer extends Employee{
+    int getBonus(int num2){
+        return num2;
+    }
 
-         Manager so = new Manager();
-         Employee e = new Employee();
-         e.displayInfo("Karan");
-         so.displayInfo("HR");
-     }
+    public static void main(String[] args) {
+
+        Employee em = new Employee();
+        em.getBonus(1000);
+
+        Manager m = new Manager();
+        m.getBonus(3000);
+
+        Developer d = new Developer();
+        d.getBonus(2000);
+
+
+
+        System.out.println("------------EMPLOYEE-BONUS--------");
+
+        System.out.println("Employee Bonus:- " + em.getBonus(1000));
+        System.out.println("Manager Bonus:- " + m.getBonus(3000));
+        System.out.println("Developer Bonus:- " + d.getBonus(2000));
+
+
+
+    }
 }
