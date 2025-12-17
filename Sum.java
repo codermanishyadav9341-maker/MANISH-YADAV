@@ -1,22 +1,20 @@
-package ArrayListPractice;
+package Java_Roof;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Sum {
     public static void main(String[] args){
 
-        ArrayList <Integer> number = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
 
-        number.add(1);
-        number.add(2);
-        number.add(3);
-        number.add(4);
+        System.out.print("Enter your First number:- ");
+        int num1 = scan.nextInt();
 
-        int sum = 0;
+        System.out.print("Enter your Second number:- ");
+        float num2 = scan.nextFloat();
 
-        for(int num : number){
-            sum += num;
-        }
-        System.out.println("Sum of Elements:- " +sum);
+        float sum = (num1 +num2);
+
+        System.out.println("Sum of two number is:- " +sum);
     }
 }

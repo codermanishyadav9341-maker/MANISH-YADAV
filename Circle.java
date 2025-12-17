@@ -1,54 +1,18 @@
-package ENCAPSULATIONS;
+package Java_Roof;
 
- class Circle {
-     private double radius;
+import java.util.Scanner;
 
-     double pie = 3.14;
+public class Circle {
+    public static void main(String[] args){
 
-     public void setRadius(double newRadius) {
-         radius = newRadius;
-     }
+        Scanner scan = new Scanner(System.in);
 
-     public double getRadius(double diameters){
-         radius = diameters/2;
-         return radius;
-     }
+        System.out.print("Enter your Radius:- ");
+        int radius = scan.nextInt();
 
-     public double getArea(){
+        double circumference = 2*3.14*radius;
 
+        System.out.println("Circumference Of Circle:- " +circumference);
 
-         double area_of_circle = 2*pie*radius*radius;
-
-         return area_of_circle;
-     }
-
-     public double getCircumference(){
-
-         double circumference_of_Circle = 2*pie*radius;
-         return circumference_of_Circle;
-     }
-
-     public double getDiameter(){
-
-       double  diameters = 2*radius;
-         return diameters;
-
-     }
-
-     public static void main(String[] args){
-
-         Circle c = new Circle();
-         c.setRadius(10);
-         c.getDiameter();
-         c.getArea();
-         c.getCircumference();
-
-         System.out.println("----Circle------");
-         System.out.println("Circle of Radius:- " +c.getRadius(10));
-         System.out.println("Area of Circle:- " +c.getArea());
-         System.out.println("Circumference of Circle:- " +c.getCircumference());
-         System.out.println("Diameters of Circle:- " +c.getDiameter());
-     }
-
-
- }
+    }
+}
