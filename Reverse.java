@@ -1,24 +1,50 @@
-package ArrayListPractice;
+package JavaLoop;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Scanner;
 
-public class Reverse {
-    public static void main(String[] args) {
+//public class Reverse {
+//    public static void main(String[] args){
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.print("Enter your number:- ");
+//        int num = scan.nextInt();
+//
+//        int reverse = 0;
+//        int remainder = 1;
+//
+//        System.out.println("Before Reverse:- " +num);
+//
+//        while(num != 0){
+//            remainder = num%10;
+//            reverse = reverse * 10 + remainder;
+//            num  = num/10;
+//        }
+//        System.out.println("Reverse number:- " +reverse);
+//    }
+//}
 
-        ArrayList<Integer> number = new ArrayList<>();
 
-        number.add(1);
-        number.add(2);
-        number.add(3);
-        number.add(4);
 
-        System.out.println("Before Reverse:- ");
-        System.out.println(number);
 
-        Collections.reverse(number);
 
-        System.out.println("After Reverse:- " );
-        System.out.println(number);
+
+class Reverse{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter your number:- ");
+        int num = scan.nextInt();
+
+        int reverse = 0;
+        int remainder = 1;
+
+        while(num != 0){
+            remainder = num%10;
+            reverse = reverse*10+remainder;
+            num = num/10;
+        }
+
+        System.out.println("Reverse number:- " +reverse);
+
     }
 }
