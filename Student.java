@@ -1,19 +1,22 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
-public class Student {
+class Student {
 
-    void printDetails(String name,int age){
-        System.out.println("Name:- " +name + "  \n Age:- " +age);
+    public void printDetails(String name,int age){
+        System.out.println("Student Name:- " +name);
+        System.out.println("Age:- " +age);
     }
 
-     void printDetails(String name, int age, String course){
+    public void printDetails(String name,int age,String course){
+        System.out.println("Student Name:- " +name);
+        System.out.println("Age:- " +age);
+        System.out.println("Course:- " +course);
+    }
 
-        System.out.println("Name:- " +name+ " \n Age:- " +age+ " \n Course:- " +course);
-     }
-
-    public static void main(String[] args) {
-        Student s = new Student();
-        s.printDetails("Manish" ,20);
-        s.printDetails("Rahul",21,"B.Tech");
+    public static void main(String[] args){
+        Student so = new Student();
+        so.printDetails("Manish Yadav",23);
+        so.printDetails("Ronit",23,"B.Tech");
     }
 }
+

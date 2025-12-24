@@ -1,25 +1,32 @@
-package Java_Inheritance;
+package Java_POLYMORPHISM;
 
  class Shape1 {
-     public void perimeters(){
-         System.out.println("Calculating Perimeters.........");
+     public void printShape(){
+         System.out.println("This is a Shape");
      }
 }
 
 class Square extends Shape1{
-     double sides;
+     public void printShape(){
+         System.out.println("This is a Square");
+     }
+}
 
-     Square(double sides){
-         this.sides = sides;
+class Triangle extends Shape1{
+     public void printShape(){
+         System.out.println("This is a triangle");
      }
 
-     public void perimeters(){
-         double square = (4*sides);
-         System.out.println("Perimeters of Square:- " +square);
-     }
      public static void main(String[] args){
 
-         Square so = new Square(5);
-         so.perimeters();
+         Shape1 so = new Shape1();
+         so.printShape();
+
+         Square sq = new Square();
+         sq.printShape();
+
+         Triangle tt = new Triangle();
+         tt.printShape();
+         
      }
 }

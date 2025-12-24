@@ -1,21 +1,23 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
-class Greeter {
-    void great(){
-        System.out.println("Hello");
-    }
-    void great(String name){
-        System.out.println("Hello " +name);
-    }
-    void great(String name,double time){
-        System.out.println("Good morning " +time+ " " +name);
-    }
+ class Greeter {
+     public void greet(){
+         System.out.println("Hello");
+     }
 
-    public static void main(String[] args) {
-        Greeter so = new Greeter();
+     public void greet(String name){
+         System.out.println("Hello , " +name);
+     }
 
-        so.great();
-        so.great("Riya");
-        so.great("Riya" , 6.20);
-    }
+     public void greet(String time,String name){
+         System.out.println(time+ "," +name);
+     }
+
+     public static void main(String[] args){
+         Greeter ge = new Greeter();
+         ge.greet();
+         ge.greet("Riya");
+         ge.greet("Good Morning","Riya");
+
+     }
 }

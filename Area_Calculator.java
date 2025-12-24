@@ -1,25 +1,36 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
-public class Area_Calculator {
+ class Area_Calculator {
 
-    void area(int radius , double pie){
-        double area_of_Circle = 2*pie*radius;
+     int area(int radius){
+         int area_Of_Circle = (2*radius*radius);
 
-        System.out.println("Area of circle:- " +area_of_Circle);
-    }
-    void area(int length, int breath){
-        int area_of_rectangle = (length*breath);
-        System.out.println("Area of rectangle:- " +area_of_rectangle);
-    }
-    void area(double base,double height){
-        double area_of_triangle = 1/2*(base*height);
-        System.out.println("Area of triangle:- " +area_of_triangle);
-    }
+         return area_Of_Circle;
+     }
 
-    public static void main(String[] args) {
-        Area_Calculator c = new Area_Calculator();
-        c.area(2,3.14);
-        c.area(10,20);
-        c.area(2,5);
-    }
+
+     int area(int length,int breath){
+         int area_Of_Rectangle = (length*breath);
+         return area_Of_Rectangle;
+     }
+
+     double area(double base, double height){
+         double area_Of_triangle = 0.5*(base*height);
+
+         return area_Of_triangle;
+     }
+
+     public static void main(String[] args){
+
+         Area_Calculator AC = new Area_Calculator();
+
+         AC.area(10);
+         AC.area(10,20);
+         AC.area(5.0,10);
+
+         System.out.println("Area of Circle:- " +AC.area(10));
+         System.out.println("Area of Rectangle:- " +AC.area(10,20));
+         System.out.println("Area of triangle:- " +  AC.area(50.0,10.0));
+
+     }
 }

@@ -1,41 +1,34 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
-class Vehicle{
+ class Vehicle {
 
-     void display_Information(){
-
+     public void displayInfo(){
          System.out.println("Generic Vehicle");
      }
 }
 
-class car extends Vehicle{
-     void display_Information(){
-         System.out.println("4 Wheels");
+class Car extends Vehicle{
+
+     public void displayInfo(){
+         System.out.println("Car: 4 Wheels");
      }
 }
 
-class bike extends Vehicle{
-     void display_Information(){
-         System.out.println("2 Wheels");
+class Bike extends Vehicle{
+
+     public void displayInfo(){
+         System.out.println("Bike: 2 Wheels");
      }
 
-    public static void main(String[] args) {
+     public static void main(String[] args){
 
-         Vehicle sp = new Vehicle();
-         sp.display_Information();
+         Vehicle vo = new Vehicle();
+         vo.displayInfo();
 
+         Car ca = new Car();
+         ca.displayInfo();
 
-       bike b = new bike();
-       b.display_Information();
-
-
-       car c = new car();
-       c.display_Information();
-
-
-
-
-
-
-    }
+         Bike bk = new Bike();
+         bk.displayInfo();
+     }
 }

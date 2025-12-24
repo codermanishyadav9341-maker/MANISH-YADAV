@@ -1,27 +1,28 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
  class Volume_Calculator {
-
-     void volume(int a){
-         int volume_of_cube = (a*a*a);
-         System.out.println("Volume of cube:- " +volume_of_cube);
+     public void Volume(int side){
+         int cube = (side*side*side);
+         System.out.println("Volume of Cube:- " +cube);
      }
 
-     void volume(int length,int breath,int height){
-         int volume_of_Cuboid = (length * breath * height);
-         System.out.println("Volume of Cuboid :- " +volume_of_Cuboid);
+     public void cuboid(int length,int breath,int height){
+         int cuboid = (length*breath*height);
+         System.out.println("Volume of Cuboid:- " +cuboid);
      }
-     void volume(double $,int radius,int height){
-         double volume_of_Cylinder = ($*radius*radius*height);
-         System.out.println("Volume of cylinder:- " +volume_of_Cylinder);
+
+     public void cylinder(double radius,double height){
+         double cylinder = 3.14*radius*radius*height;
+         System.out.println("Volume of Cylinder:- " +cylinder);
      }
+
      public static void main(String[] args){
 
-         Volume_Calculator v = new Volume_Calculator();
+         Volume_Calculator so = new Volume_Calculator();
+         so.Volume(10);
+         so.cuboid(10,20,5);
+         so.cylinder(10,5);
 
-         v.volume(3);
-         v.volume(40,40,40);
-         v.volume(3.14,2,5);
 
      }
 }

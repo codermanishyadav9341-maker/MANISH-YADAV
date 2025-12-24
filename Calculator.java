@@ -1,22 +1,21 @@
-package POLYMORPHISM;
+package Java_POLYMORPHISM;
 
-class Calculator {
+ class Calculator {
 
-    void sum(int a, int b){
-        int sum = a+b;
-        System.out.println("Sum of two number:- " +sum);
-    }
+     public void add(int num1 ,int num2){
+         int result = (num1+num2);
+         System.out.println("Sum of two number:- " +result);
+     }
 
-    void sum(int a, int b, int c){
-        int sum = a+b+c;
-        System.out.println("Sum of three:- " +sum);
-    }
+     public void add(int num1,int num2,int num3){
+         int result = (num1+num2+num3);
+         System.out.println("Sum of three number:- " +result);
+     }
 
-    public static void main(String[] args) {
-         Calculator so = new Calculator();
+     public static void main(String[] args){
 
-         so.sum(20,10);
-         so.sum(50 ,10,15);
-
-    }
+         Calculator co = new Calculator();
+         co.add(10,20);
+         co.add(10,20,30);
+     }
 }
