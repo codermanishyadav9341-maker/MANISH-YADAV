@@ -1,20 +1,32 @@
-package Inheritance1;
+package Java_Inheritance;
 
- class College {
-     void college(String college_Name){
-         System.out.println("College Name:- " +college_Name);
-     }
+class College {
+    String collegeName;
+
+    College(String collegeName){
+        this.collegeName = collegeName;
+    }
+
 }
 
 class Admission extends College{
-     void admission(String student_Name,String course){
-         System.out.println("Student Name:- " +student_Name+ "\n Course:- " +course);
-     }
+    String name;
+    String course;
 
-     public static void main(String[] args){
+    Admission(String collegeName,String name,String course){
+        super(collegeName);
+        this.name = name;
+        this.course = course;
+    }
 
-         Admission so = new Admission();
-         so.college("R P S College Mahnar");
-         so.admission("Manish Yadav" , "BCA");
-     }
+    public void display(){
+        System.out.println("College Name:- " +collegeName);
+        System.out.println("Student Name:- " +name);
+        System.out.println("Course:- " +course);
+    }
+
+    public static void main(String[] args){
+        Admission ad = new Admission("RPS College Mahnar","Manish Yadav","BCA");
+        ad.display();
+    }
 }

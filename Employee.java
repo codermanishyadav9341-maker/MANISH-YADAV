@@ -1,42 +1,34 @@
-package POLYMORPHISM;
+package Java_Inheritance;
 
-class Employee {
-    int getBonus(int num) {
-        return num;
-    }
+ class Employee {
+     String name;
+
+     Employee(String name){
+         this.name = name;
+     }
+
+     public void displayInfo(){
+         System.out.println("Employee Name:- " +name);
+     }
+
 }
 
 class Manager extends Employee{
-    int getBonus(int num1){
-        return num1;
-    }
-}
+     String departments;
 
-class Developer extends Employee{
-    int getBonus(int num2){
-        return num2;
-    }
+     Manager(String name,String departments){
+         super(name);
+         this.departments = departments;
+     }
 
-    public static void main(String[] args) {
+     public void displayInfo(){
+         System.out.println("Employee Name:- " +name);
+         System.out.println("Departments:- " +departments);
 
-        Employee em = new Employee();
-        em.getBonus(1000);
+     }
+     public static void main(String[] args){
 
-        Manager m = new Manager();
-        m.getBonus(3000);
-
-        Developer d = new Developer();
-        d.getBonus(2000);
-
-
-
-        System.out.println("------------EMPLOYEE-BONUS--------");
-
-        System.out.println("Employee Bonus:- " + em.getBonus(1000));
-        System.out.println("Manager Bonus:- " + m.getBonus(3000));
-        System.out.println("Developer Bonus:- " + d.getBonus(2000));
-
-
-
-    }
+         Manager so = new Manager("Manish Yadav","HR");
+         so.displayInfo();
+     }
 }

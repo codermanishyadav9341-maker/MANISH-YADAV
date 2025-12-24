@@ -1,21 +1,35 @@
-package Inheritance1;
+package Java_Inheritance;
 
  class Course {
-     void displayInfo(String course_Name){
-         System.out.println("Course Name:- "  +course_Name);
+     String courseName;
+
+     Course(String courseName){
+         this.courseName = courseName;
+     }
+
+     public void showCourse(){
+         System.out.println("Course Name:- " +courseName);
      }
 }
 
 class EnrolledStudent extends Course{
-     void showCourse(String studentName,int rollNumber){
-         System.out.println("Student Name:- " +studentName+ "\n Roll Number:- " +rollNumber);
+     String name;
+     int rollNo;
+
+     EnrolledStudent(String courseName,String name,int rollNo){
+         super(courseName);
+         this.name = name;
+         this.rollNo = rollNo;
      }
 
+     public void showCourse(){
+         System.out.println("Course Name:- " +courseName);
+         System.out.println("Student Name:- " +name);
+         System.out.println("Roll No:- " +rollNo);
+
+     }
      public static void main(String[] args){
-
-         EnrolledStudent so = new EnrolledStudent();
-         so.displayInfo("Coding ");
-         so.showCourse("Manish",10);
-
+         EnrolledStudent so = new EnrolledStudent("Java Programming","Manish Yadav",101);
+         so.showCourse();
      }
 }

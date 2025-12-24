@@ -1,21 +1,33 @@
-package Inheritance1;
+package Java_Inheritance;
 
-class School {
-    void showSchool(String school_Name){
-        System.out.println("School Name:- " +school_Name);
-    }
+ class School {
+     String schoolName;
+
+     School(String schoolName){
+         this.schoolName = schoolName;
+     }
+
+     public void schoolName(){
+         System.out.println("School Name:- " +schoolName);
+     }
 }
 
 class Teacher extends School{
-    void showTeacherDetails(String teacher_Name){
-        System.out.println("Teacher name:- " +teacher_Name);
-    }
+     String name;
 
-    public static void main(String[] args){
+     Teacher(String schoolName, String name){
+         super(schoolName);
+         this.name = name;
+     }
 
-        Teacher so = new Teacher();
-        so.showSchool("Coding Age");
-        so.showTeacherDetails("Mr. Gaurav Kasyap");
+     public void teacherDetails(){
+         System.out.println("Teacher Name:- " +name);
+     }
 
-    }
+     public static void main(String[] args){
+
+         Teacher so = new Teacher("Vidya Niketan","Gaurav Kasyap");
+         so.schoolName();
+         so.teacherDetails();
+     }
 }

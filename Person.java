@@ -1,17 +1,17 @@
-package Inheritance1;
+package Java_Inheritance;
 
  class Person {
-     void showDetails(){
-         System.out.println("Person Details");
+     public void ShowDetails(){
+         System.out.println("Student Details");
      }
 }
 
 class Student extends Person{
-     void showDetails(){
+     public void ShowDetails(){
          System.out.println("Student Details");
      }
      public static void main(String[] args){
-         Student s = new Student();
-         s.showDetails();
+         Student so = new Student();
+         so.ShowDetails();
      }
 }

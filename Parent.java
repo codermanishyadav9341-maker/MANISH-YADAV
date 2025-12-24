@@ -1,20 +1,17 @@
-package Inheritance1;
+package Java_Inheritance;
 
  class Parent {
-     void parent(){
-         System.out.println("Parent Constructors Called");
+     Parent(){
+         System.out.println("Parent constructor called");
      }
 }
 
 class Child extends Parent{
-     void Child(){
-         System.out.println("Child Constructors Called");
+     Child(){
+         System.out.println("Child Constructor called");
      }
 
-    public static void main(String[] args) {
-
-         Child c = new Child();
-         c.parent();
-         c.Child();
-    }
+     public static void main(String[] args){
+         Child so = new Child();
+     }
 }

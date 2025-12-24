@@ -1,21 +1,32 @@
-package Inheritance1;
+package Java_Inheritance;
 
-class Device {
-    void showInfo(String device_Name){
-        System.out.println("Device Name:- " +device_Name);
-    }
+ class Device {
+     String deviceName;
+
+     Device(String deviceName){
+         this.deviceName = deviceName;
+     }
+
+     public void showInfo(){
+         System.out.println("Device Name:- " +deviceName);
+     }
 }
 
 class Mobile extends Device{
-    void ShowInfo(String op){
-        System.out.println("Operating System:- " +op);
-    }
+     String OS;
 
-    public static void main(String[] args){
+     Mobile(String deviceName,String OS){
+         super(deviceName);
+         this.OS = OS;
+     }
 
-        Mobile so = new Mobile();
-        so.showInfo("Samsung Galaxy");
-        so.ShowInfo("Android");
+     public void showInfo(){
+         System.out.println("Device Name:- " +deviceName);
+         System.out.println("OS:- " +OS);
+     }
 
-    }
+     public static void main(String[] args){
+         Mobile so = new Mobile("OPPO","Android");
+         so.showInfo();
+     }
 }

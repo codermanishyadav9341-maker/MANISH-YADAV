@@ -1,21 +1,36 @@
-package Inheritance1;
+package Java_Inheritance;
 
- class Book {
-     void showDetails(String titles,String author){
-         System.out.println("Titles:- " +titles+ "\n Author:- " +author);
-     }
+class Book {
+    String title;
+    String author;
+
+    Book(String title,String author){
+        this.title = title;
+        this.author = author;
+    }
+
+    public void showDetails(){
+        System.out.println("Title:- " +title);
+        System.out.println("Author:- " +author);
+    }
 }
 
 class LibraryBook extends Book{
-     void showDetails(int shelfNumber){
-         System.out.println("ShelfNumber:- " +shelfNumber);
-     }
+    int shiftNumber;
 
-     public static void main(String[] args){
+    LibraryBook(String title,String author,int shiftNumber){
+        super(title,author);
+        this.shiftNumber = shiftNumber;
+    }
 
-         LibraryBook so = new LibraryBook();
+    public void showDetails(){
+        System.out.println("Titles:- " +title);
+        System.out.println("Author:- " +author);
+        System.out.println("ShiftNumber:- " +shiftNumber);
 
-         so.showDetails("Java Basics","John Smith");
-         so.showDetails(5);
-     }
+    }
+    public static void main(String[] args){
+        LibraryBook so = new LibraryBook("Java Basics","John smith",105);
+        so.showDetails();
+    }
 }

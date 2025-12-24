@@ -1,13 +1,13 @@
-package Inheritance1;
+package Java_Inheritance;
 
  class Train {
-     void run(){
-         System.out.println("Train is running");
+     public void run(){
+         System.out.println("Train is running.....");
      }
 }
 
 class Metro extends Train{
-     void run(){
+     public void run(){
          System.out.println("Metro is running on electric track");
      }
 

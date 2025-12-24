@@ -1,34 +1,32 @@
-package Inheritance1;
+package Java_Inheritance;
 
-class Food{
-    String foodName;
+ class Food {
+     String foodName;
 
-    Food(String foodName){
-        this.foodName = foodName;
-    }
+     Food(String foodName){
+         this.foodName = foodName;
+     }
 
-    void display(){
-        System.out.println("Food Name:- " +foodName);
-    }
+     public void display(){
+         System.out.println("Food Name:- " +foodName);
+     }
 }
-
 class Desert extends Food{
-   String SweetnessLevel;
+     String sweetnessLevel;
 
-    Desert(String foodName, String SweetnessLevel){
-        super(foodName);
+     Desert(String foodName,String sweetnessLevel){
+         super(foodName);
+         this.sweetnessLevel = sweetnessLevel;
+     }
 
-        this.SweetnessLevel = SweetnessLevel;
-    }
+     public void display(){
+         System.out.println("FoodName:- " +foodName);
+         System.out.println("SweetnessLevel:- " +sweetnessLevel);
+     }
 
-    void display(){
-        System.out.println("Food Name:- " +foodName);
-        System.out.println("SweetnessLevel:- " +SweetnessLevel);
-    }
+     public static void main(String[] args){
 
-    public static void main(String[] args) {
-
-        Desert so = new Desert("Gulab Jamun" , "High");
-        so.display();
-    }
+         Desert so = new Desert("Mango","High");
+         so.display();
+     }
 }
